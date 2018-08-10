@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width,height=device-height, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<!--em标准js代码，请放在页面的最上方，前面最好不要再有JS代码或JS文件-->
+	<script type="text/javascript" src="script/rem.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/css.css" />
+	<link type="text/css" rel="stylesheet" href="css/fuwuV2.css" />
+	<title>医疗</title>
+	<style>
+		.hm_top1 {
+			height: 2.8rem;
+			box-sizing: border-box;
+			width: 100%;
+			background: url("./image/header_bg.png") repeat-y top center;
+			background-size: 100% auto;
+		}
+
+		.line1341 {
+			height: 1.34rem;
+			clear: both;
+		}
+
+		.hmt_wp1 {
+			width: 82%;
+			padding: 0 5%;
+			height: 2.6rem;
+			background: #fff;
+			margin: 0 auto;
+			border-radius: 0.2rem;
+			box-shadow: 0 0.05rem 0.15rem #ccc;
+			position: relative;
+		}
+
+		.inf1 {
+			padding-top: 0.4rem;
+			font-size: 0.3rem;
+		}
+		.content1>.item1 {
+			background-color: #fff;
+			margin-bottom: 10px;
+			padding: 6.5em 1.5em 1.5em 1.5em;
+		}
+		.content2>.item2 {
+			background-color: #fff;
+			margin-bottom: 10px;
+			padding: 1.5em 1.5em 1.5em 1.5em;
+		}
+		.online_text {
+			padding-left: 0.1em;
+			padding-bottom: 0.3em;
+			font-weight: bold;
+			font-size: 1.4em;
+			color: rgb(73, 73, 73);
+		}
+
+		.voice_video {
+			padding-left: 2.6em;
+			padding-bottom: 0.3em;
+			font-size: 0.8em;
+			color: rgb(153, 153, 153);
+		}
+
+		.hotline24 {
+			width: 95%;
+			height: 0.9rem;
+			line-height:0.9rem;
+			border-radius: 0.25rem;
+			text-align: center;
+			color: #fff;
+			font-size: 0.4rem;
+			margin-top: 0.15rem;
+		}
+		.voice{
+			background: rgb(104,195,239);
+		}
+		.video{
+			background: rgb(80,208,197);
+		}
+		.voice_videoButton{
+			padding-top:0.25rem;
+			padding-bottom: 0.25rem;
+			width: 100%
+		}
+		.nursing{
+				background: rgb(154,166,241);
+		}
+	</style>
+</head>
+
+<body class="wb">
+
+	<header class="header">
+		<a href="javascript:;" class="head_back"></a>
+		<div class="title">一键服务</div>
+	</header>
+
+	<section class="hm_top1">
+		<div class="line1341"></div>
+		<section class="hmt_wp1">
+			<div class="inf1">
+				<div style="width:10%;float:left;">
+					<img src="./image/address.png">
+				</div>
+				<div style="width:90%;float: left;">
+					<p>
+						<span id="name-show">王兴林（先生/女士）</span>
+						<span class="right" id="cellphone-show">保密</span>
+					</p>
+					<p style="padding-top:0.1rem">
+						<span class="address" id="address-show"> 派单地址：（此处地址要根据视频服务沟通所定）</span>
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</section>
+	</section>
+
+
+	<div class="content1">
+		<div class="item1">
+			<div>
+				<img src="./image/online@0.5x.png" class="img">
+				<span class="online_text">问诊服务申请<span>
+			</div>
+			<div>
+				<span class="voice_video">语音电话/视频电话问诊<span>
+			</div>
+			<div class="voice_videoButton">
+				<div class="hotline24 voice" onclick="videoCallP2D('callAudio', 'wzohpatient')">语音呼叫中心</div>
+				<div class="hotline24 video" onclick="videoCallP2D('callVideo', 'wzohpatient')">视频呼叫中心</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content2">
+		<div class="item2">
+			<div>
+				<img src="./image/online@0.5x.png" class="img">
+				<span class="online_text">护理服务申请<span>
+			</div>
+			<div>
+				<span class="voice_video" >电话预约上门护理医疗服务<span>
+			</div>
+			<div class="voice_videoButton">
+				<div class="hotline24 nursing" onclick="videoCallP2D('医疗服务')">一键预约上门</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<a href="index.html" class="hover">
+			<i class="ico ico1"></i>
+			<span>首页</span>
+				</a>
+				<a href="home-doctor.html">
+					<i class="ico ico2"></i>
+					<span>家庭医生</span>
+				</a>
+				<a href="care.html">
+					<i class="ico ico3"></i>
+					<span>智能关爱</span>
+				</a>
+				<a href="my.html">
+					<i class="ico ico4"></i>
+					<span>我的</span>
+				</a>
+				</footer>
+				<div class="footer_zw"></div>
+
+</body>
+<script type="text/javascript" src="script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="script/api.js"></script>
+<script type="text/javascript" src="script/base.js"></script>
+<script type="text/javascript" src="script/v1.js"></script>
+<script type="text/javascript" src="script/appData.js"></script>
+<script type="text/javascript">
+	var userInfo = null;
+	apiready = function() {
+		userInfo = appData.user.loginResult();
+		$("#name-show").text(userInfo.name + "（先生/女士）");
+		$("#cellphone-show").text(userInfo.cellphone);
+		$("#address-show").text("派单地址："+userInfo.address);
+	}
+
+	function videoCallP2D(cmd, peerID) {
+        iOS.callNative(cmd, peerID);
+
+		// if (userInfo == null) {
+		// 	alert('用户没有登录不能呼叫，请重新登录');
+		// 	return
+		// }
+
+		// var url_0 = videoCallURL + "?fromPatientCellphone=" + userInfo.cellphone
+		// 	//url_1 是可以使用的
+		// 	// var url_1=	"https://117.149.225.38:8016/videoCallP2D/?fromPatientCellphone=17756702082&toDoctorCellphone=lgjd"
+		// 	// var url_2=	"https://117.149.225.38:8016/videoCallP2D?fromPatientCellphone=17756702082"
+		// var url = url_0;
+		// api.openWin({
+		// 	name: "videoCallP2D",
+		// 	url: 'header-X5.html',
+		// 	pageParam: {
+		// 		title: title,
+		// 		url: url,
+		// 		param: {}
+		// 	}
+		// });
+	}
+</script>
+
+</html>
